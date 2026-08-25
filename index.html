@@ -1,96 +1,852 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Accurate Ventures | Domestic Courier & Logistics Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#ea580c',
+                            600: '#c2410c',
+                            700: '#9a3412',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
         }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .container {
-            padding: 40px 20px;
-            max-width: 600px;
-        }
-
-        h1 {
-            font-size: 52px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .coming-soon {
-            font-size: 16px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.8;
-            margin-bottom: 15px;
-        }
-
-        .contact {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #1e3c72;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-
-        .contact:hover {
-            background: #f0f0f0;
-        }
-
-        footer {
-            margin-top: 50px;
-            font-size: 13px;
-            opacity: 0.7;
-        }
-    </style>
+    </script>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
 
-    <div class="container">
-
-        <div class="coming-soon">Coming Soon</div>
-
-        <h1>Something Amazing Is Coming</h1>
-
-        <p>
-            We are working hard to bring you our new website.
-            Please check back soon!
-        </p>
-
-        <a href="mailto:info@accurateventures.in" class="contact">
-            Contact Us
-        </a>
-
-        <footer>
-            &copy; 2026 Accurate Ventures. All Rights Reserved.
-        </footer>
-
+    <!-- TOP BAR -->
+    <div
+        class="bg-slate-900 text-slate-300 text-xs py-2 px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 border-b border-slate-800">
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-brand-500"></i> info@accurateventures.in
+            </span>
+            <span class="hidden md:flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-brand-500"></i> Rabindra Nagar, Kolkata 700111
+            </span>
+        </div>
+        <div class="flex items-center gap-4 text-xs">
+            <span class="bg-brand-500/20 text-brand-500 px-2.5 py-0.5 rounded-full font-semibold">Pan-India
+                Network</span>
+            <span>Express & Cargo Solutions</span>
+        </div>
     </div>
 
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div
+                    class="w-11 h-11 bg-gradient-to-tr from-brand-600 to-amber-500 rounded-xl flex items-center justify-center text-white text-xl font-black shadow-md shadow-brand-500/20">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-tight">ACCURATE
+                        <span class="text-brand-500">VENTURES</span></span>
+                    <span class="text-[10px] tracking-widest uppercase font-semibold text-slate-400">Courier & Cargo
+                        Services</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-500 transition-colors">About Us</a>
+                <a href="#services" class="hover:text-brand-500 transition-colors">Services</a>
+                <a href="#industries" class="hover:text-brand-500 transition-colors">Industries</a>
+                <a href="#why-us" class="hover:text-brand-500 transition-colors">Why Accurate</a>
+                <a href="#clients" class="hover:text-brand-500 transition-colors">Clients</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#quote"
+                    class="bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-brand-500/25 transition-all transform active:scale-95">
+                    Request Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-slate-700 hover:text-brand-500 text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-slate-600 font-medium py-1">About Us</a>
+            <a href="#services" class="block text-slate-600 font-medium py-1">Services</a>
+            <a href="#industries" class="block text-slate-600 font-medium py-1">Industries</a>
+            <a href="#why-us" class="block text-slate-600 font-medium py-1">Why Accurate</a>
+            <a href="#clients" class="block text-slate-600 font-medium py-1">Clients</a>
+            <a href="#quote"
+                class="block w-full text-center bg-brand-500 text-white py-2.5 rounded-lg font-semibold mt-2">Request
+                Quote</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-slate-900 text-white overflow-hidden py-20 lg:py-28">
+        <!-- Subtle Background Elements -->
+        <div
+            class="absolute inset-0 opacity-10 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:20px_20px]">
+        </div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 text-xs font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-shield-check"></i> Nationwide Express Logistics Partner
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Delivering Trust, <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-500">On
+                        Time Every Time, Accurately.</span>
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+                    Accurate Ventures is a professionally managed courier and cargo service provider delivering
+                    time-bound, cost-effective domestic express, surface, and air cargo solutions across India.
+                </p>
+
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#quote"
+                        class="w-full sm:w-auto text-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all">
+                        Book a Shipment
+                    </a>
+                    <a href="#services"
+                        class="w-full sm:w-auto text-center border border-slate-700 hover:border-slate-500 text-slate-300 font-semibold px-8 py-3.5 rounded-xl transition-all">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- TRACKING & STATUS WIDGET CARD (COMING SOON) -->
+            <div class="lg:col-span-5">
+                <div
+                    class="bg-white/10 backdrop-blur-xl border border-white/15 p-6 sm:p-8 rounded-2xl shadow-2xl text-slate-100 relative overflow-hidden">
+                    <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                        <h2 class="text-lg font-bold flex items-center gap-2">
+                            <i class="fa-solid fa-box-open text-brand-500"></i> Track Consignment
+                        </h2>
+                        <span
+                            class="text-xs bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full font-bold uppercase tracking-wider animate-pulse">
+                            Coming Soon
+                        </span>
+                    </div>
+
+                    <form id="trackingForm" onsubmit="event.preventDefault(); showComingSoon();" class="mt-5 space-y-4">
+                        <!--<div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">AWB
+                                / Consignment Note No.</label>
+                            <div class="relative">
+                                <input id="trackingInput" type="text" placeholder="e.g. ACC-2026-89472"
+                                    class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition">
+                                <button type="submit"
+                                    class="absolute right-1.5 top-1.5 bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg text-xs font-semibold transition">
+                                    Track
+                                </button>
+                            </div>
+                        </div>-->
+                    </form>
+
+                    <!-- Coming Soon Alert Message -->
+                    <div id="trackingNotice"
+                        class="mt-5 p-4 rounded-xl bg-slate-900/90 border border-amber-500/40 text-xs space-y-2">
+                        <div class="flex items-center gap-2 font-bold text-amber-400">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            <span>Online Tracking Portal Launching Soon</span>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            Our live multi-carrier tracking integration is under active development. For immediate
+                            consignment status updates, reach out to our team at
+                            <a href="mailto:info@accurateventures.in"
+                                class="text-brand-400 font-semibold underline">info@accurateventures.in</a>.
+                        </p>
+                    </div>
+
+                    <!-- Quick Feature Badges -->
+                    <div class="grid grid-cols-2 gap-3 mt-6 pt-4 border-t border-white/10 text-xs text-slate-300">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-brand-500"></i> Time-Bound
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-brand-500"></i> 100% Safe Transit
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY STRENGTHS METRICS -->
+    <section class="bg-white border-b border-slate-100 py-10 shadow-sm relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl border border-slate-50 bg-slate-50/50">
+                    <div class="text-3xl font-extrabold text-brand-500 mb-1">Pan-India</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Wide Coverage</div>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-50 bg-slate-50/50">
+                    <div class="text-3xl font-extrabold text-slate-900 mb-1">100%</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Operational Efficiency</div>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-50 bg-slate-50/50">
+                    <div class="text-3xl font-extrabold text-brand-500 mb-1">Guaranteed</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Time-Bound Delivery</div>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-50 bg-slate-50/50">
+                    <div class="text-3xl font-extrabold text-slate-900 mb-1">Consistent</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Service Quality</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div
+                        class="inline-block px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider rounded-md">
+                        Who We Are
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Seamless Logistics Powered by Authorized National Tie-Ups
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong>Accurate Ventures</strong> is a professionally managed courier and
+                        cargo service provider offering reliable, cost-effective, and time-bound logistics solutions
+                        across India.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        We specialize in domestic express, surface, and air cargo movements by leveraging strong
+                        strategic partnerships with India’s leading logistics companies, ensuring total peace of mind
+                        for B2B and retail clients.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div
+                            class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-xs border border-slate-200/60">
+                            <i class="fa-solid fa-circle-check text-brand-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">National Reach</h4>
+                                <p class="text-xs text-slate-500">End-to-end multi-modal connectivity across all states.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-xs border border-slate-200/60">
+                            <i class="fa-solid fa-circle-check text-brand-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">Single Point Contact</h4>
+                                <p class="text-xs text-slate-500">Dedicated operational desk for bookings and inquiries.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div
+                        class="bg-gradient-to-br from-slate-900 to-slate-800 p-8 sm:p-10 rounded-3xl text-white shadow-xl relative overflow-hidden">
+                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-500/10 rounded-full blur-2xl">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Our Core Strengths</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                            We engineer cargo workflows designed around precision timelines and cost-saving advantages
+                            for commercial enterprises.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3.5 rounded-xl">
+                                <span
+                                    class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-sm">1</span>
+                                <span class="text-sm font-semibold text-slate-200">Wide Coverage & Tier 1-3
+                                    Penetration</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3.5 rounded-xl">
+                                <span
+                                    class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-sm">2</span>
+                                <span class="text-sm font-semibold text-slate-200">High Operational Efficiency & Route
+                                    Optimization</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3.5 rounded-xl">
+                                <span
+                                    class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-sm">3</span>
+                                <span class="text-sm font-semibold text-slate-200">Guaranteed Time-Bound Delivery
+                                    Schedules</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/5 border border-white/10 p-3.5 rounded-xl">
+                                <span
+                                    class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-sm">4</span>
+                                <span class="text-sm font-semibold text-slate-200">Consistent & Dependable Service
+                                    Quality</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES OFFERED -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div
+                    class="inline-block px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider rounded-md mb-3">
+                    Our Capabilities
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Comprehensive Logistics Services</h2>
+                <p class="text-slate-500 mt-3 text-base">Customized freight, surface, and priority express transport
+                    engineered for safety and velocity.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div
+                    class="p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand-500/30 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Air Cargo</h3>
+                    <p class="text-xs font-semibold text-brand-600 uppercase mb-3 tracking-wide">Express & General Cargo
+                    </p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        High-speed domestic air freight movements for time-critical documents, valuable parcels, and
+                        priority commercial cargo.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand-500/30 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-truck-moving"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Surface & Express Logistics</h3>
+                    <p class="text-xs font-semibold text-brand-600 uppercase mb-3 tracking-wide">Roadway Distribution
+                    </p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Extensive surface transit network ensuring seamless ground transportation with scheduled transit
+                        times across the nation.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand-500/30 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-trailer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Full Truck Load (FTL)</h3>
+                    <p class="text-xs font-semibold text-brand-600 uppercase mb-3 tracking-wide">Dedicated Capacity</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Dedicated vehicle placement for bulk consignments, industrial equipment, and large-scale
+                        manufacturing consignments.
+                    </p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div
+                    class="p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand-500/30 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-train-subway"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Rail Cargo</h3>
+                    <p class="text-xs font-semibold text-brand-600 uppercase mb-3 tracking-wide">Cost-Effective Freight
+                    </p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Eco-friendly, budget-optimized long-haul cargo movement utilizing India's vast railway logistics
+                        infrastructure.
+                    </p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div
+                    class="p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand-500/30 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-building-circle-arrow-right"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">B2B & Corporate Shipments</h3>
+                    <p class="text-xs font-semibold text-brand-600 uppercase mb-3 tracking-wide">Enterprise Accounts</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Custom corporate contracts with transparent monthly billing, consolidated reporting, and
+                        priority SLA handling.
+                    </p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div
+                    class="p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand-500/30 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Time-Definite Deliveries</h3>
+                    <p class="text-xs font-semibold text-brand-600 uppercase mb-3 tracking-wide">Cost-Optimized Speed
+                    </p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Tailored logistics routing balancing maximum speed and cost efficiency to meet your exact
+                        supply-chain windows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES WE SERVE -->
+    <section id="industries" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div
+                    class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider rounded-md mb-3">
+                    Sector Expertise
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Industries We Serve</h2>
+                <p class="text-slate-400 mt-2">Specialized handling aligned with vertical-specific compliances and
+                    dispatch urgency.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div
+                    class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl text-center hover:border-brand-500/50 transition">
+                    <div
+                        class="w-12 h-12 mx-auto bg-slate-700/60 text-brand-500 rounded-xl flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-200">Corporate Offices</h4>
+                </div>
+
+                <div
+                    class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl text-center hover:border-brand-500/50 transition">
+                    <div
+                        class="w-12 h-12 mx-auto bg-slate-700/60 text-brand-500 rounded-xl flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-200">Manufacturing & Trading</h4>
+                </div>
+
+                <div
+                    class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl text-center hover:border-brand-500/50 transition">
+                    <div
+                        class="w-12 h-12 mx-auto bg-slate-700/60 text-brand-500 rounded-xl flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-200">E-commerce & Retail</h4>
+                </div>
+
+                <div
+                    class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl text-center hover:border-brand-500/50 transition">
+                    <div
+                        class="w-12 h-12 mx-auto bg-slate-700/60 text-brand-500 rounded-xl flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-200">Pharma & Healthcare</h4>
+                </div>
+
+                <div
+                    class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl text-center hover:border-brand-500/50 transition col-span-2 sm:col-span-1">
+                    <div
+                        class="w-12 h-12 mx-auto bg-slate-700/60 text-brand-500 rounded-xl flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-boxes-packing"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-slate-200">FMCG & Consumer Goods</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE ACCURATE -->
+    <section id="why-us" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div
+                    class="inline-block px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider rounded-md mb-3">
+                    Our Advantage
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Accurate Ventures?</h2>
+                <p class="text-slate-600 mt-2">Built upon precision, strong accountability, and commercial value.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-orange-100 text-brand-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-1">Authorized National Tie-ups</h4>
+                        <p class="text-xs text-slate-600">Deep integration with top-tier carriers across all Indian
+                            transit hubs.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-orange-100 text-brand-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-1">Single Point Coordination</h4>
+                        <p class="text-xs text-slate-600">Zero phone-tag; single account representative for all your
+                            consignments.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-orange-100 text-brand-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-1">Competitive Pricing</h4>
+                        <p class="text-xs text-slate-600">Highly affordable rates structured for high-volume and regular
+                            dispatches.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-orange-100 text-brand-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-1">Transparent Billing</h4>
+                        <p class="text-xs text-slate-600">Clear invoices without hidden charges or unverified
+                            surcharges.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-orange-100 text-brand-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-magnifying-glass-location"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-1">Strong Tracking Support</h4>
+                        <p class="text-xs text-slate-600">Continuous milestone visibility and proactive status
+                            notifications.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-orange-100 text-brand-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-1">Secure, Timely Deliveries</h4>
+                        <p class="text-xs text-slate-600">High-security handling protocol ensuring packages arrive safe
+                            and on time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUED CUSTOMERS / CLIENTELE -->
+    <section id="clients" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="inline-block px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider rounded-md mb-3">
+                Trusted Partnerships
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Our Valued Customers</h2>
+            <p class="text-slate-600 mt-2 max-w-2xl mx-auto">
+                Proud logistics partner to prominent organizations across logistics, healthcare, apparel,
+                infrastructure, manufacturing, and trading sectors.
+            </p>
+
+            <!-- Client Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
+
+                <!-- Emirates Logistics India -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center hover:border-red-500/40 hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-red-700 text-white rounded-xl flex items-center justify-center mb-2.5 shadow-sm">
+                        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z" />
+                        </svg>
+                    </div>
+                    <span class="font-bold text-xs text-slate-900">
+                        Emirates Logistics India
+                    </span>
+                </div>
+
+                <!-- HP Cottons & Casuals -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center hover:border-red-500/40 hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-red-700 text-white rounded-xl flex items-center justify-center mb-2.5 shadow-sm">
+                        <i class="fa-solid fa-shirt text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-xs text-slate-900">
+                        HP Cottons & Casuals
+                    </span>
+                </div>
+
+                <!-- Vaidyanathan Oushadhalaya -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center hover:border-red-500/40 hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-red-700 text-white rounded-xl flex items-center justify-center mb-2.5 shadow-sm">
+                        <i class="fa-solid fa-mortar-pestle text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-xs text-slate-900">
+                        Vaidyanathan Oushadhalaya
+                    </span>
+                </div>
+
+                <!-- INDEV Infra Pvt. Ltd. -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center hover:border-red-500/40 hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-red-700 text-white rounded-xl flex items-center justify-center mb-2.5 shadow-sm">
+                        <i class="fa-solid fa-building text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-xs text-slate-900">
+                        INDEV Infra Pvt. Ltd.
+                    </span>
+                </div>
+
+                <!-- Ashoka International -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center hover:border-red-500/40 hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-red-700 text-white rounded-xl flex items-center justify-center mb-2.5 shadow-sm">
+                        <i class="fa-solid fa-globe text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-xs text-slate-900">
+                        Ashoka International
+                    </span>
+                </div>
+
+                <!-- Brokemen Logistics -->
+                <div
+                    class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center text-center hover:border-red-500/40 hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-red-700 text-white rounded-xl flex items-center justify-center mb-2.5 shadow-sm">
+                        <i class="fa-solid fa-dolly text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-xs text-slate-900">
+                        Brokemen Logistics
+                    </span>
+                </div>
+
+            </div>
+
+            <p class="mt-8 text-xs font-semibold text-slate-500">
+                In addition, proudly serving numerous small and medium-sized enterprises (SMEs) across Eastern India.
+            </p>
+        </div>
+    </section>
+
+    <!-- QUOTE REQUEST & CONTACT -->
+    <section id="quote" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div
+                        class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider rounded-md">
+                        Get In Touch
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">Let's Streamline Your Logistics</h2>
+                    <p class="text-slate-400 leading-relaxed text-sm">
+                        Contact us directly for custom B2B freight rates, regional pickup requests, or express delivery
+                        partnerships.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-500 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold uppercase">Operational Address</p>
+                                <p class="text-sm text-slate-200 font-medium mt-0.5">Rabindra Nagar, 24 Pgn (N), Kolkata
+                                    - 700111, West Bengal</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-500 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold uppercase">Email Inquiries</p>
+                                <a href="mailto:info@accurateventures.in"
+                                    class="text-sm text-brand-400 hover:underline font-medium mt-0.5 block">info@accurateventures.in</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-500 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold uppercase">Nature of Business</p>
+                                <p class="text-sm text-slate-200 font-medium mt-0.5">Courier & Cargo Services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live FormSubmit.co Integration with reCAPTCHA -->
+                <div class="lg:col-span-7 bg-white text-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl">
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Request an Instant Quote</h3>
+                    <p class="text-xs text-slate-500 mb-6">Fill out your consignment details and our dispatch team will
+                        connect with you.</p>
+
+                    <form action="https://formsubmit.co/accurate.courier03@gmail.com" method="POST" class="space-y-4">
+                        <!-- FormSubmit Configuration Fields -->
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_subject" value="New Logistics Quote Request - Accurate Ventures">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Your Name / Company *</label>
+                                <input type="text" name="name" required placeholder="e.g. Acme Corp"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Email / Phone *</label>
+                                <input type="text" name="contact" required placeholder="name@company.com / +91..."
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Origin City / Pincode
+                                    *</label>
+                                <input type="text" name="origin" required placeholder="e.g. Kolkata (700111)"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Destination City / Pincode
+                                    *</label>
+                                <input type="text" name="destination" required
+                                    placeholder="e.g. Mumbai, Delhi, Guwahati"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Required Service</label>
+                                <select name="service_type"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 text-slate-700">
+                                    <option value="Air Cargo (Express & General)">Air Cargo (Express & General)</option>
+                                    <option value="Surface & Express Logistics">Surface & Express Logistics</option>
+                                    <option value="Full Truck Load (FTL)">Full Truck Load (FTL)</option>
+                                    <option value="Rail Cargo">Rail Cargo</option>
+                                    <option value="B2B Corporate Account">B2B Corporate Account</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Approx. Weight /
+                                    Volume</label>
+                                <input type="text" name="consignment_size" placeholder="e.g. 50 kg / 2 Pallets"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Additional Requirements
+                                (Optional)</label>
+                            <textarea name="remarks" rows="2"
+                                placeholder="Time sensitivity, fragile goods details, etc."
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-brand-500"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Submit Rate Request
+                        </button>
+                        <p class="text-[11px] text-center text-slate-400 mt-2">
+                            <i class="fa-solid fa-shield-check text-emerald-500"></i> Protected by reCAPTCHA
+                            verification.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white text-sm font-black">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <span class="text-white font-bold text-sm">Accurate Ventures</span>
+            </div>
+            <div>
+                <p class="text-center sm:text-right">&copy; 2026 Accurate Ventures. Delivering Trust, On Time Every
+                    Time,
+                    Accurately.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        // Mobile navigation toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Show Coming Soon notification on track trigger
+        function showComingSoon() {
+            const notice = document.getElementById('trackingNotice');
+            notice.classList.add('ring-2', 'ring-amber-400');
+            setTimeout(() => {
+                notice.classList.remove('ring-2', 'ring-amber-400');
+            }, 1200);
+        }
+    </script>
 </body>
+
 </html>
